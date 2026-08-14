@@ -1,0 +1,159 @@
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #0d0d0b;
+  --bg-card-hover: #151513;
+  --bg-light: #f4f4f2;
+  --ink: #f4f4f2;
+  --ink-dark: #0a0a0a;
+  --ink-soft: #cfcfcc;
+  --ink-muted: #a8a8a4;
+  --ink-faint: #6b6b67;
+  --ink-fainter: #4d4d49;
+  --border: #1c1c1a;
+  --border-card: #232320;
+  --orange: #ff4305;
+  --orange-hover: #ff5c1f;
+  --orange-light: #ff6a35;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--ink-dark);
+}
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--orange-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0) rotate(8deg);
+  }
+  100% {
+    transform: translateX(18px) rotate(8deg);
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.btn-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--ink-dark);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 16px 30px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.btn-orange:hover {
+  background: var(--orange-hover) !important;
+  color: var(--ink-dark);
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft) !important;
+  transition: color 0.15s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--orange);
+  transition: width 0.2s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--orange) !important;
+}

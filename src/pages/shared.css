@@ -1,0 +1,60 @@
+.page-intro {
+  padding: 80px 56px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-eyebrow {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(42px, 7vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 900px;
+}
+
+.page-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  max-width: 560px;
+  margin: 28px 0 0;
+}
+
+.cta {
+  padding: 140px 56px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.cta-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
+}
+
+.cta-btn {
+  font-size: 16px;
+  padding: 18px 36px;
+}
+
+@media (max-width: 640px) {
+  .page-intro,
+  .cta {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

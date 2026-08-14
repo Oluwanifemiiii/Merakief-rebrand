@@ -1,0 +1,92 @@
+.team-section {
+  padding: 40px 56px 140px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.member {
+  border: 1px solid var(--border-card);
+  background: var(--bg-card);
+  padding: 24px;
+  transition: border-color 0.25s;
+}
+
+.member:hover {
+  border-color: var(--orange);
+}
+
+.member-photo {
+  width: 100%;
+  height: 280px;
+  border-radius: 2px;
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  border: 1px dashed #2a2a26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-faint);
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.member-info {
+  margin-top: 20px;
+}
+
+.member-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 21px;
+  margin: 0 0 4px;
+}
+
+.member-role {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--orange);
+  letter-spacing: 0.02em;
+}
+
+.team-statement {
+  background: var(--bg-light);
+  color: var(--ink-dark);
+  padding: 120px 56px;
+}
+
+.team-statement-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.team-statement-lead {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.team-statement-desc {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #333330;
+  margin: 0;
+  max-width: 480px;
+}
+
+@media (max-width: 900px) {
+  .team-statement-inner {
+    grid-template-columns: 1fr;
+  }
+}

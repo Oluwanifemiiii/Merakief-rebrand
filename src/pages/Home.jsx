@@ -12,9 +12,9 @@ const SERVICES = [
 const WORK = [
   {
     letter: 'K',
-    sector: 'Fintech',
+    sector: 'Transportation',
     name: 'Korope',
-    desc: 'A budgeting app that helps people move round with a budget — built end-to-end from product design through to launch.',
+    desc: 'A bus-hailing app that connects commuters with nearby buses in real time — ride-hailing for mass transit, built end-to-end through to launch.',
   },
   {
     letter: 'V',
@@ -41,10 +41,7 @@ export default function Home() {
         <div className="hero-watermark">M</div>
 
         <div className="hero-content">
-          <div className="fade-up hero-eyebrow">
-            <span className="pulse-dot" />
-            Lagos &nbsp;/&nbsp; Technology Studio
-          </div>
+          
           <h1 className="fade-up hero-title" style={{ animationDelay: '.08s' }}>
             Product.
             <br />
@@ -54,7 +51,7 @@ export default function Home() {
           </h1>
           <p className="fade-up hero-desc" style={{ animationDelay: '.16s' }}>
             We build full-stack applications, custom ERP systems, and cloud
-            infrastructure for energy, fintech, agriculture, and e-commerce
+            infrastructure for energy, transportation, agriculture, and e-commerce
             companies across Nigeria and beyond.
           </p>
           <div className="fade-up hero-actions" style={{ animationDelay: '.24s' }}>

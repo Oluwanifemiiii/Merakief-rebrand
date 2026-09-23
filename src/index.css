@@ -1,32 +1,75 @@
 :root {
-  --bg: #0a0a0a;
-  --bg-card: #0d0d0b;
-  --bg-card-hover: #151513;
-  --bg-light: #f4f4f2;
+  --surface: #0a0a0a;
+  --surface-card: #0d0d0b;
+  --surface-card-hover: #151513;
+  --surface-inverse: #f4f4f2;
+
   --ink: #f4f4f2;
-  --ink-dark: #0a0a0a;
   --ink-soft: #cfcfcc;
   --ink-muted: #a8a8a4;
   --ink-faint: #6b6b67;
   --ink-fainter: #4d4d49;
+
+  --ink-inverse: #0a0a0a;
+  --ink-inverse-muted: #333330;
+  --ink-inverse-faint: #54524d;
+
   --border: #1c1c1a;
   --border-card: #232320;
+  --border-inverse: #d8d6d2;
+
+  --ink-on-accent: #0a0a0a;
   --orange: #ff4305;
   --orange-hover: #ff5c1f;
   --orange-light: #ff6a35;
+  --amber: #b5711f;
+  --tag-border: #3a2a1c;
+
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'DM Sans', sans-serif;
+
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --surface: #f7f6f2;
+  --surface-card: #ffffff;
+  --surface-card-hover: #eeece6;
+  --surface-inverse: #0a0a0a;
+
+  --ink: #0a0a0a;
+  --ink-soft: #45443c;
+  --ink-muted: #5b5a52;
+  --ink-faint: #86847b;
+  --ink-fainter: #a3a196;
+
+  --ink-inverse: #f4f4f2;
+  --ink-inverse-muted: #cfcfcc;
+  --ink-inverse-faint: #a8a8a4;
+
+  --border: #e4e2da;
+  --border-card: #dbd8cf;
+  --border-inverse: #2a2a26;
+
+  color-scheme: light;
 }
 
 * {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease, fill 0.25s ease, stroke 0.25s ease;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: var(--surface);
 }
 
 body {
@@ -42,7 +85,7 @@ body {
 
 ::selection {
   background: var(--orange);
-  color: var(--ink-dark);
+  color: var(--ink-on-accent);
 }
 
 a {
@@ -114,7 +157,7 @@ button {
   align-items: center;
   gap: 10px;
   background: var(--orange);
-  color: var(--ink-dark);
+  color: var(--ink-on-accent);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 15px;
@@ -127,7 +170,7 @@ button {
 
 .btn-orange:hover {
   background: var(--orange-hover) !important;
-  color: var(--ink-dark);
+  color: var(--ink-on-accent);
   transform: translateY(-2px);
 }
 

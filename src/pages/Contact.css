@@ -113,7 +113,7 @@
 .submit-btn {
   margin-top: 32px;
   background: var(--orange);
-  color: var(--ink-dark);
+  color: var(--ink-on-accent);
   border: none;
   font-family: var(--font-display);
   font-weight: 600;

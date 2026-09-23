@@ -51,7 +51,7 @@ export default function Contact() {
             <div>
               <div className="contact-meta-label">Sectors</div>
               <div className="contact-meta-value">
-                Energy · Fintech · Agriculture · E-commerce
+                Energy · Transportation · Agriculture · E-commerce
               </div>
             </div>
           </div>

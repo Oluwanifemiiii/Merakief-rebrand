@@ -39,7 +39,7 @@
   font-family: var(--font-display);
   font-size: 220px;
   font-weight: 700;
-  color: #141412;
+  color: var(--surface-card-hover);
   line-height: 1;
   user-select: none;
   pointer-events: none;
@@ -102,14 +102,14 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #2a2a26;
+  border: 1px solid var(--border-card);
   color: var(--ink);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 15px;
   padding: 16px 30px;
   border-radius: 2px;
-  transition: border-color 0.15s, transform 0.15s;
+  transition: border-color 0.15s, transform 0.15s, color 0.25s ease;
 }
 
 .btn-outline:hover {
@@ -180,7 +180,7 @@
 }
 
 .svc-card:hover {
-  background: var(--bg-card-hover);
+  background: var(--surface-card-hover);
   border-color: var(--orange);
 }
 
@@ -227,7 +227,7 @@
 
 .work-card {
   border: 1px solid var(--border-card);
-  background: var(--bg-card);
+  background: var(--surface-card);
   padding: 38px 30px;
   display: flex;
   flex-direction: column;
@@ -235,12 +235,41 @@
   min-height: 320px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.25s, border-color 0.25s;
+  isolation: isolate;
+  transition: transform 0.25s, border-color 0.25s, background-color 0.25s ease;
 }
 
 .work-card:hover {
   transform: translateY(-6px);
   border-color: var(--orange);
+}
+
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.work-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 260px;
+  z-index: 0;
+  background-image: radial-gradient(circle, var(--ink-faint) 2px, transparent 2px);
+  background-size: 13px 13px;
+  -webkit-mask-image: radial-gradient(circle at top right, black, transparent 85%);
+  mask-image: radial-gradient(circle at top right, black, transparent 85%);
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .work-sector {
@@ -249,7 +278,7 @@
   letter-spacing: 0.1em;
   color: var(--orange);
   text-transform: uppercase;
-  border: 1px solid #3a2a1c;
+  border: 1px solid var(--tag-border);
   padding: 5px 10px;
   border-radius: 2px;
   width: fit-content;
@@ -262,7 +291,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 170px;
-  color: var(--bg-card-hover);
+  color: var(--surface-card-hover);
   line-height: 1;
   user-select: none;
 }
@@ -287,8 +316,8 @@
 }
 
 .philosophy {
-  background: var(--bg-light);
-  color: var(--ink-dark);
+  background: var(--surface-inverse);
+  color: var(--ink-inverse);
   padding: 130px 56px;
 }
 
@@ -322,7 +351,7 @@
 .philosophy-desc {
   font-size: 17px;
   line-height: 1.75;
-  color: #333330;
+  color: var(--ink-inverse-muted);
   margin: 0 0 24px;
   max-width: 480px;
 }
@@ -331,13 +360,13 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 15px;
-  color: var(--ink-dark) !important;
-  border-bottom: 1px solid var(--ink-dark);
+  color: var(--ink-inverse) !important;
+  border-bottom: 1px solid var(--ink-inverse);
   padding-bottom: 2px;
 }
 
 .cta {
-  background: var(--bg);
+  background: var(--surface);
   padding: 150px 56px;
   text-align: center;
   border-top: 1px solid var(--border);

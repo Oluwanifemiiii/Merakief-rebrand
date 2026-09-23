@@ -1,11 +1,25 @@
 import { Link } from 'react-router-dom';
+import ucheImg from '../assets/uche.jpg';
+import xanderImg from '../assets/Xander.jpeg';
+import nifemiImg from '../assets/nifemi.jpg';
+import osatoImg from '../assets/osato.jpg';
+import favourImg from '../assets/favour.jpeg';
+import princeImg from '../assets/prince.jpeg';
+import maryImg from '../assets/mary.jpeg';
+import zeloImg from '../assets/zelo.jpg';
+import davidImg from '../assets/david.png';
 import './Team.css';
 
 const TEAM = [
-  { id: '1', name: 'Add name', role: 'Add role' },
-  { id: '2', name: 'Add name', role: 'Add role' },
-  { id: '3', name: 'Add name', role: 'Add role' },
-  { id: '4', name: 'Add name', role: 'Add role' },
+  { id: '1', name: 'Uche Iloeje', role: 'Chief Executive Officer', photo: ucheImg },
+  { id: '2', name: 'Alexander Afolabi', role: 'Product & Designs Systems Lead', photo: xanderImg },
+  { id: '3', name: 'Oluwanifemi Ipaye', role: 'Chief Technology Officer', photo: nifemiImg },
+  { id: '4', name: 'Prince Nwokolo', role: 'Chief Design Officer', photo: princeImg },
+  { id: '5', name: 'Osatohamwen Omoigui', role: 'Chief Product Officer', photo: osatoImg },
+  { id: '6', name: 'Favour Babalola', role: 'Product Research Lead', photo: favourImg },
+  { id: '7', name: 'David Ugwuegbulam', role: 'Application Engineering Lead', photo: davidImg },
+  { id: '8', name: 'Denzel Okoro', role: 'Data & Infrastructure Lead', photo: zeloImg },
+  { id: '9', name: 'Mary Ogunlaja', role: 'Product Strategy Lead', photo: maryImg },
 ];
 
 export default function Team() {
@@ -26,7 +40,15 @@ export default function Team() {
         <div className="team-grid">
           {TEAM.map((mem) => (
             <div className="member" key={mem.id}>
-              <div className="member-photo">Drop a photo</div>
+              {mem.photo ? (
+                <img
+                  src={mem.photo}
+                  alt={mem.name}
+                  className="member-photo member-photo-img"
+                />
+              ) : (
+                <div className="member-photo member-photo-empty">Drop a photo</div>
+              )}
               <div className="member-info">
                 <h3 className="member-name">{mem.name}</h3>
                 <div className="member-role">{mem.role}</div>

@@ -11,11 +11,11 @@
   grid-template-columns: 80px 1.2fr 1.6fr;
   gap: 32px;
   align-items: start;
-  transition: background 0.25s, padding-left 0.25s;
+  transition: background 0.25s, padding-left 0.25s, border-color 0.25s ease;
 }
 
 .svc-row:hover {
-  background: #131311;
+  background: var(--surface-card-hover);
   padding-left: 16px;
 }
 
@@ -50,8 +50,8 @@
 }
 
 .process-section {
-  background: var(--bg-light);
-  color: var(--ink-dark);
+  background: var(--surface-inverse);
+  color: var(--ink-inverse);
   padding: 120px 56px;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .step {
-  border: 1px solid #d8d6d2;
+  border: 1px solid var(--border-inverse);
   padding: 28px 24px;
   transition: border-color 0.2s;
 }
@@ -87,7 +87,7 @@
 .step-num {
   font-family: var(--font-display);
   font-size: 13px;
-  color: #b5711f;
+  color: var(--amber);
   margin-bottom: 16px;
 }
 
@@ -101,7 +101,7 @@
 .step-desc {
   font-size: 14px;
   line-height: 1.6;
-  color: #54524d;
+  color: var(--ink-inverse-faint);
   margin: 0;
 }
 

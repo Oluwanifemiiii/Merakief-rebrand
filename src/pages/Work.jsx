@@ -4,10 +4,10 @@ import './Work.css';
 const WORK = [
   {
     letter: 'K',
-    sector: 'Fintech',
-    year: '2025',
+    sector: 'Transportation',
+    year: '2026',
     name: 'Korope',
-    desc: 'A budgeting app that helps people move round with a budget — designed and built end-to-end through to launch.',
+    desc: 'A bus-hailing app that connects commuters with nearby buses in real time — ride-hailing for mass transit, designed and built end-to-end through to launch.',
     tags: ['Mobile', 'Product design', 'Backend'],
   },
   {
@@ -21,7 +21,7 @@ const WORK = [
   {
     letter: 'F',
     sector: 'Agriculture',
-    year: '2024',
+    year: '2026',
     name: 'Farmstead ERP',
     desc: 'A custom ERP for tracking yield, inventory, and logistics across a distributed farm network.',
     tags: ['ERP', 'Web app'],
@@ -29,7 +29,7 @@ const WORK = [
   {
     letter: 'S',
     sector: 'E-commerce',
-    year: '2024',
+    year: '2025',
     name: 'Sabi Market',
     desc: 'A merchant platform and checkout system built to handle high-volume order flow reliably.',
     tags: ['Web app', 'Payments'],
@@ -47,8 +47,8 @@ export default function Work() {
           shipped and running.
         </h1>
         <p className="fade-up page-desc" style={{ animationDelay: '.12s' }}>
-          A sample of the products and platforms we've built across fintech,
-          energy, and agriculture.
+          A sample of the products and platforms we've built across
+          transportation, energy, and agriculture.
         </p>
       </section>
 

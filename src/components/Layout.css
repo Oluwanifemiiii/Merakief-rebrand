@@ -1,6 +1,6 @@
 .page-shell {
   font-family: var(--font-body);
-  background: var(--bg);
+  background: var(--surface);
   color: var(--ink);
   width: 100%;
   overflow-x: hidden;
@@ -27,6 +27,33 @@
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--border-card);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .site-footer {

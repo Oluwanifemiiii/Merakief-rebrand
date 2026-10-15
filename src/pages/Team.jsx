@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import ucheImg from '../assets/uche.jpg';
+import ucheImg from '../assets/ucheportrait.jpeg';
 import xanderImg from '../assets/Xander.jpeg';
 import nifemiImg from '../assets/nifemi.jpg';
 import osatoImg from '../assets/osato.jpg';
-import favourImg from '../assets/favour.jpeg';
+import favourImg from '../assets/favouredited.png';
 import princeImg from '../assets/prince.jpeg';
 import maryImg from '../assets/mary.jpeg';
 import zeloImg from '../assets/zelo.jpg';

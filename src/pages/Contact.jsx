@@ -75,8 +75,8 @@ export default function Contact() {
             Tell us what you're trying to build. We reply within a business
             day.
           </p>
-          <a href="mailto:hello@merakief.com" className="big-link">
-            hello@merakief.com
+          <a href="mailto:merakief@outlook.com" className="big-link">
+            merakief@outlook.com
           </a>
           <div className="contact-meta">
             <div>

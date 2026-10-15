@@ -130,6 +130,21 @@
   transform: translateY(-2px);
 }
 
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+  transform: none;
+}
+
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact-success {
   font-family: var(--font-display);
   font-size: 17px;

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/merakief-logo.png';
 import { useTheme } from '../useTheme.js';
@@ -47,18 +48,29 @@ function ThemeToggle() {
 }
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <nav className="site-nav">
-      <NavLink to="/">
-        <img src={logo} alt="Merakief" className="site-logo" />
-      </NavLink>
-      <div className="site-nav-links">
-        {NAV_LINKS.map((link) => (
-          <NavLinkItem key={link.to} {...link} />
-        ))}
-        <ThemeToggle />
-      </div>
-    </nav>
+    <header className={'site-header' + (scrolled ? ' scrolled' : '')}>
+      <nav className="site-nav">
+        <NavLink to="/">
+          <img src={logo} alt="Merakief" className="site-logo" />
+        </NavLink>
+        <div className="site-nav-links">
+          {NAV_LINKS.map((link) => (
+            <NavLinkItem key={link.to} {...link} />
+          ))}
+          <ThemeToggle />
+        </div>
+      </nav>
+    </header>
   );
 }
 

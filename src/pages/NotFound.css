@@ -1,0 +1,42 @@
+.notfound {
+  position: relative;
+  max-width: 1400px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 80px 56px 120px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.notfound-watermark {
+  position: absolute;
+  right: 4%;
+  bottom: -4%;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(180px, 34vw, 480px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--surface-card-hover);
+  user-select: none;
+  pointer-events: none;
+}
+
+.notfound-content {
+  position: relative;
+}
+
+.notfound-actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .notfound {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

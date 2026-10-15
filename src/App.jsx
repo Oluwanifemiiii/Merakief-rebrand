@@ -7,6 +7,7 @@ import Work from './pages/Work.jsx';
 import Services from './pages/Services.jsx';
 import Team from './pages/Team.jsx';
 import Contact from './pages/Contact.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </>

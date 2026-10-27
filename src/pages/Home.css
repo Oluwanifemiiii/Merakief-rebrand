@@ -404,4 +404,8 @@
   .hero-watermark {
     display: none;
   }
+
+  .hero-title {
+    font-size: clamp(30px, 9vw, 52px);
+  }
 }

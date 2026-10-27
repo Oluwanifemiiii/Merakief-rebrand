@@ -38,7 +38,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-frame-h" />
         <div className="hero-frame-v" />
-        <div className="hero-watermark">M</div>
+      
 
         <div className="hero-content">
           

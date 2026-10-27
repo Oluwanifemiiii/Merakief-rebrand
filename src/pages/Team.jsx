@@ -19,7 +19,7 @@ const TEAM = [
   { id: '6', name: 'Favour Babalola', role: 'Product Research Lead', photo: favourImg },
   { id: '7', name: 'David Ugwuegbulam', role: 'Application Engineering Lead', photo: davidImg },
   { id: '8', name: 'Denzel Okoro', role: 'Data & Infrastructure Lead', photo: zeloImg },
-  { id: '9', name: 'Mary Agbeke', role: 'Product Strategy Lead', photo: maryImg },
+  { id: '9', name: 'Agbeke Ogunlaja', role: 'Product Strategy Lead', photo: maryImg },
 ];
 
 export default function Team() {
